@@ -1,0 +1,235 @@
+:root {
+    --light: #8cb891;
+    --dark: #384660;
+    --list-item-font-size: 125%;
+    --corner-radius: 5px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+html {
+    min-width: 400px;
+}
+
+h1 {
+    font-size: 250%;
+}
+
+h2 {
+    font-size: 200%;
+}
+
+.main-header {
+    padding: 0.75rem 0;
+    background-color: var(--dark);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.main-header div {
+    display: flex;
+    align-content: center;
+}
+
+.main-header .callout {
+    margin: 0;
+    display: inline-block;
+    padding: 0.5rem 0.5rem 0.5rem 4rem;
+}
+
+.main-header img {
+    margin-left: 0.25rem;
+    height: 64px;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    margin-right: 3rem;
+}
+
+nav ul {
+    padding-top: 1rem;
+    list-style: none;
+    
+}
+
+nav ul li {
+    display: inline-block;
+    font-size: var(--list-item-font-size);
+}
+
+nav ul li a {
+    color: var(--light);
+}
+
+nav ul li:nth-child(-n+3)::after {
+    content: "//";
+    padding: 0 1rem;
+    color: var(--light);
+}
+
+img {
+    max-width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 4rem;
+}
+
+.callout {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.border-radius-left {
+    border-top-left-radius: var(--corner-radius);
+    border-bottom-left-radius: var(--corner-radius);
+}
+
+.border-radius-right {
+    border-top-right-radius: var(--corner-radius);
+    border-bottom-right-radius: var(--corner-radius);
+}
+
+.border-radius-full {
+    border-radius: var(--corner-radius);
+}
+
+.subtitle {
+    position: relative;
+    height: 150px;
+}
+
+.subtitle img {
+    width: 100%;
+    height: 150px;
+}
+
+.subtitle .callout {
+    position: absolute;
+    bottom: 1rem;
+    right: 0;
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+}
+
+.content-block {
+    display: flex;
+    position: relative;
+    margin: 1rem 0;
+}
+
+.content-block-title {
+    margin: 0 2rem 0 0;
+    flex: 0 0 15%;
+    min-width: 140px;
+    font-size: 250%;
+    text-align: right;
+    color: var(--dark);
+}
+
+/* Vertical divider between content title and content body. */
+.content-block-title:after {
+    content: "";
+    background: var(--dark);
+    position: absolute;
+    bottom: 0;
+    right: 1; /* This is necessary to get the vertical divider to show between the title and content... */
+    height: 100%;
+    width: 3px;
+    margin-left: 0.5rem;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.project:first-child {
+    flex: 0 0 calc(100% - 1rem);
+}
+
+.project:not(:first-child) {
+    flex: 0 0 calc(50% - 1rem);
+}
+
+.project {
+    margin: 0.5rem;
+    position: relative;
+    display: flex;
+}
+
+.project a {
+    width: 100%;
+}
+
+.project img {
+    border: var(--light) solid 5px;
+    width: 100%;
+    opacity: 0.5;
+}
+
+.project img:hover {
+    opacity: 1;
+}
+
+.project .callout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    bottom: 1.5rem;
+    padding: 0.5rem;
+}
+
+.project .callout h3 {
+    font-size: 175%;
+    flex: 1;
+}
+
+#about-me p {
+    align-self: center;
+}
+
+#contact-me ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+#contact-me ul li {
+    list-style: none;
+    color: var(--dark);
+    font-size: var(--list-item-font-size);
+}
+
+#contact-me ul li a {
+    color: var(--dark);
+}
+
+@media screen and (max-width: 580px) {
+    .project .callout {
+        top: 0;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .project:not(:first-child) {
+        flex: 0 0 calc(100% - 1rem);
+    }
+}
