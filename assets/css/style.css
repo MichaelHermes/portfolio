@@ -1,3 +1,4 @@
+/* Global style and measurement variables. */
 :root {
     --light: #8cb891;
     --dark: #384660;
@@ -5,6 +6,7 @@
     --corner-radius: 5px;
 }
 
+/* Apply global styles to the document. */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,8 +14,9 @@
     font-family: "Open Sans", sans-serif;
 }
 
+/* Don't allow the document to size below 500px wide. Going below 500px, the images don't display well. */
 html {
-    min-width: 400px;
+    min-width: 500px;
 }
 
 h1 {
@@ -24,18 +27,63 @@ h2 {
     font-size: 200%;
 }
 
+/* Remove hyperlink underline decoration. */
+a {
+    text-decoration: none;
+}
+
+nav {
+    margin-right: 3rem;
+}
+
+/* Remove bullets from navigation list items. */
+nav ul {
+    padding-top: 1rem;
+    list-style: none;
+    
+}
+
+/* Display navigation list items horizontally instead of vertically. */
+nav ul li {
+    display: inline-block;
+    font-size: var(--list-item-font-size);
+}
+
+nav ul li a {
+    color: var(--light);
+}
+
+/* Add a '//' delimiter between navigation items. */
+nav ul li:nth-child(-n+3)::after {
+    content: "//";
+    padding: 0 1rem;
+    color: var(--light);
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Set to flexbox for responsive display of the content sections. */
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 4rem;
+}
+
+/* Set to flexbox for responsive display and alignment of main header bar. */
 .main-header {
     padding: 0.75rem 0;
     background-color: var(--dark);
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Set to wrap so that when the screen is resized, the nav items wrap to a new line. */
     justify-content: space-between;
     align-items: baseline;
 }
 
 .main-header div {
     display: flex;
-    align-content: center;
+    align-items: center;
 }
 
 .main-header .callout {
@@ -49,64 +97,30 @@ h2 {
     height: 64px;
 }
 
-a {
-    text-decoration: none;
-}
-
-nav {
-    margin-right: 3rem;
-}
-
-nav ul {
-    padding-top: 1rem;
-    list-style: none;
-    
-}
-
-nav ul li {
-    display: inline-block;
-    font-size: var(--list-item-font-size);
-}
-
-nav ul li a {
-    color: var(--light);
-}
-
-nav ul li:nth-child(-n+3)::after {
-    content: "//";
-    padding: 0 1rem;
-    color: var(--light);
-}
-
-img {
-    max-width: 100%;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 4rem;
-}
-
+/* General style (text and background color) for all "callouts" in the document. */
 .callout {
     background-color: var(--light);
     color: var(--dark);
 }
 
+/* Apply border radius to only the left side of the element. Use this when the element's right side is aligned with another vertical edge. */
 .border-radius-left {
     border-top-left-radius: var(--corner-radius);
     border-bottom-left-radius: var(--corner-radius);
 }
 
+/* Apply border radius to only the right side of the element. Use this when the element's left side is aligned with another vertical edge. */
 .border-radius-right {
     border-top-right-radius: var(--corner-radius);
     border-bottom-right-radius: var(--corner-radius);
 }
 
+/* Apply a full border radius to the element. */
 .border-radius-full {
     border-radius: var(--corner-radius);
 }
 
+/* Relative positioning required for the callout to be absolutely positioned. */
 .subtitle {
     position: relative;
     height: 150px;
@@ -117,6 +131,7 @@ main {
     height: 150px;
 }
 
+/* Use absolute positioning to force the callout to the lower right. */
 .subtitle .callout {
     position: absolute;
     bottom: 1rem;
@@ -124,6 +139,7 @@ main {
     padding: 0.5rem 2rem 0.5rem 0.5rem;
 }
 
+/* All content blocks should be flexboxes for responsive display. Relative position is required for absolute positioning of vertical dividers. */
 .content-block {
     display: flex;
     position: relative;
@@ -134,7 +150,7 @@ main {
     margin: 0 2rem 0 0;
     flex: 0 0 15%;
     min-width: 140px;
-    font-size: 250%;
+    font-size: 230%;
     text-align: right;
     color: var(--dark);
 }
@@ -151,6 +167,7 @@ main {
     margin-left: 0.5rem;
 }
 
+/* Set to flexbox for responsive display of all projects. */
 .projects {
     display: flex;
     flex-wrap: wrap;
@@ -158,14 +175,17 @@ main {
     align-items: center;
 }
 
+/* Force the first project to be "full" width. */
 .project:first-child {
     flex: 0 0 calc(100% - 1rem);
 }
 
+/* Each other project should fit 2 to a row (~50% width). */
 .project:not(:first-child) {
     flex: 0 0 calc(50% - 1rem);
 }
 
+/* Each project is relatively positioned to allow for absolute callout positioning. */
 .project {
     margin: 0.5rem;
     position: relative;
@@ -176,16 +196,19 @@ main {
     width: 100%;
 }
 
+/* Fade the image by default. */
 .project img {
     border: var(--light) solid 5px;
     width: 100%;
     opacity: 0.5;
 }
 
+/* Remove the opacity when the image is being hovered. */
 .project img:hover {
     opacity: 1;
 }
 
+/* Position the callout in the bottom right of the parent project. Set to flex for responsive display of callout text. */
 .project .callout {
     display: flex;
     flex-direction: column;
@@ -204,16 +227,17 @@ main {
     align-self: center;
 }
 
+/* Set to flexbox for responsive display. Remove bullets from "Contact Me" list items. */
 #contact-me ul {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
+    list-style: none;
 }
 
 #contact-me ul li {
-    list-style: none;
     color: var(--dark);
     font-size: var(--list-item-font-size);
 }
@@ -222,12 +246,14 @@ main {
     color: var(--dark);
 }
 
+/* Fix the project callout boxes to the top of the image so that they don't overflow the top. */
 @media screen and (max-width: 580px) {
     .project .callout {
         top: 0;
     }
 }
 
+/* Dynamically switch to a single column layout. */
 @media screen and (max-width: 900px) {
     .project:not(:first-child) {
         flex: 0 0 calc(100% - 1rem);
