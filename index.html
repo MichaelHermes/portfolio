@@ -3,104 +3,108 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Michael Hermes' Portfolio</title>
-    <link rel="stylesheet" href="./assets/css/normalize.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
-        rel="stylesheet">
 </head>
 
 <body>
-    <header class="main-header">
-        <div>
-            <h1 class="callout border-radius-right">Michael Hermes</h1>
-            <img class="border-radius-full" src="assets/images/profile-pic.jpg" alt="Profile picture">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#about-me">About Me</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#contact-me">Contact Me</a></li>
-                <li><a href="#resume">Resume</a></li>
-            </ul>
-        </nav>
-
-    </header>
-
-    <figure class="subtitle">
-        <img src="assets/images/subtitle-background.jpg" alt="Black textured background">
-        <h2 class="callout border-radius-left">Portfolio</h2>
-    </figure>
-
-    <main>
-        <section id="about-me" class="content-block">
-            <h2 class="content-block-title">About<br>Me</h2>
-            <p>My name is Michael Hermes and I am an aspiring web developer. I began my software development career in
-                2012, with the majority of my experience focusing primarily on Windows desktop applications. I am
-                excited by the creative freedom that web development allows me to showcase.
-            </p>
-        </section>
-        <section id="work" class="content-block">
-            <h2 class="content-block-title">Work</h2>
-            <div class="projects">
-                <figure class="project">
-                    <a href="https://michaelhermes.github.io/Unit02-CSS-Snippet-Cheatsheet/" target="_blank"><img
-                            class="border-radius-full" src="assets/images/keyboard-white.jpg"
-                            alt="A mac keyboard with a phone on top"></a>
-                    <div class="callout border-radius-right">
-                        <h3>CSS Snippet Cheatsheet</h3>
-                        <p>HTML / CSS</p>
-                    </div>
-                </figure>
-                <figure class="project">
-                    <a href="#"><img class="border-radius-full" src="assets/images/phone.jpg"
-                            alt="An iphone in someone's hand"></a>
-                    <div class="callout border-radius-right">
-                        <h3>Project #2</h3>
-                        <p>Coming Soon!</p>
-                    </div>
-                </figure>
-                <figure class="project">
-                    <a href="#"><img class="border-radius-full" src="assets/images/speaker.jpg"
-                            alt="A portable speaker on a desktop"></a>
-                    <div class="callout border-radius-right">
-                        <h3>Project #3</h3>
-                        <p>Coming Soon!</p>
-                    </div>
-                </figure>
-                <figure class="project">
-                    <a href="#"><img class="border-radius-full" src="assets/images/computer-screens.jpg"
-                            alt="Several computer screens arranged in a circular display"></a>
-                    <div class="callout border-radius-right">
-                        <h3>Project #4</h3>
-                        <p>Coming Soon!</p>
-                    </div>
-                </figure>
-                <figure class="project">
-                    <a href="#"><img class="border-radius-full" src="assets/images/keyboard-black-and-blue.jpg"
-                            alt="A black keyboard with blue accent lighting"></a>
-                    <div class="callout border-radius-right">
-                        <h3>Project #5</h3>
-                        <p>Coming Soon!</p>
-                    </div>
-                </figure>
+    <div class="background"></div>
+    <div class="intro-left">
+        <div class="container-fluid full-height">
+            <div class="row text-center align-items-center full-height">
+                <div class="col">
+                    <img src="assets/images/avatar.jpg" alt="User avatar" class="avatar" />
+                    <p class="display-6">Michael Hermes</p>
+                    <p>Web Developer</p>
+                </div>
             </div>
-        </section>
-        <section id="contact-me" class="content-block">
-            <h2 class="content-block-title">Contact<br>Me</h2>
-            <ul>
-                <li>425.802.0713</li>
-                <li>//</li>
-                <li><a href="mailto:mikehermes87@gmail.com">mikehermes87@gmail.com</a></li>
-                <li>//</li>
-                <li><a href="https://github.com/MichaelHermes" target="_blank">GitHub</a></li>
-            </ul>
-        </section>
-    </main>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-8 panel-right px-0">
+                <section class="intro">
+                    <h1 class="display-4">Web Development Professional Portfolio</h1>
+                    <p>
+                        I am an aspiring web developer. I began my software development career in
+                        2012, with the majority of my experience focusing primarily on Windows desktop applications. I
+                        am
+                        excited by the creative freedom that web development allows me to showcase.
+                    </p>
+                </section>
+
+                <section class="projects">
+                    <h2 class="display-6">My projects:</h2>
+                    <div class="container-fluid">
+                        <div class="row gy-5">
+                            <div class="col-md-6">
+                                <a href="https://michaelhermes.github.io/City-Scan/" target="_blank"><img
+                                        src="assets/images/2.jpg" alt="Portfolio image"
+                                        class="img-fluid thumbnail" /></a>
+                                <h3>City Scan</h3>
+                                <h4>Javascript, HTML, CSS</h4>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="https://michaelhermes.github.io/Weather-Dashboard/" target="_blank"><img
+                                        src="assets/images/3.jpg" alt="Portfolio image"
+                                        class="img-fluid thumbnail" /></a>
+                                <h3>Weather Dashboard</h3>
+                                <h4>Javascript, HTML, CSS</h4>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="https://michaelhermes.github.io/coding-quiz/" target="_blank"><img
+                                        src="assets/images/4.jpg" alt="Portfolio image"
+                                        class="img-fluid thumbnail" /></a>
+                                <h3>Coding Quiz</h3>
+                                <h4>Javascript, HTML, CSS</h4>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <footer class="text-center text-lg-start bg-light text-muted">
+                    <section>
+                        <div class="container text-center text-md-start mt-5">
+                            <div class="row mt-3">
+                                <div class="col mx-auto mb-md-0 mb-4">
+                                    <h6 class="text-uppercase fw-bold mb-4">
+                                        Contact
+                                    </h6>
+                                    <p><i class="fas fa-home me-3"></i> Snohomish, WA 98296</p>
+                                    <p>
+                                        <i class="fas fa-envelope me-3"></i>
+                                        mikehermes87@gmail.com
+                                    </p>
+                                    <p><i class="fas fa-phone me-3"></i>425.807.0713</p>
+                                    <p><a href="#" target="_blank" class="text-reset"><i
+                                                class="fas fa-download me-3"></i></a>Resume</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center p-4 border-top">
+                            <a href="https://www.linkedin.com/in/michaeljhermes/" target="_blank"
+                                class="me-4 text-reset">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/MichaelHermes" target="_blank" class="me-4 text-reset">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </section>
+                </footer>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
