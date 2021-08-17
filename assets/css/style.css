@@ -63,3 +63,7 @@ a {
 	position: fixed;
 	clip-path: polygon(36% 0, 95% 0, 65% 100%, 18% 100%);
 }
+
+.project-title {
+	text-decoration: underline;
+}
