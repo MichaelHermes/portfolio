@@ -8,4 +8,4 @@ This is my personal web development portfolio. It contains a showcase of web app
 
 My portfolio can be found at the following GitHub page: [Michael Hermes' Portfolio](https://michaelhermes.github.io/portfolio/). Click on any of the project images to launch that web page or application.
 
-![A gif of my portfolio webpage](./assets/images/portfolio.gif)
+<img src="./assets/images/portfolio.gif" width="50%" alt="A gif of my portfolio webpage"/>
